@@ -9,6 +9,11 @@ body {
   	color: #5a5a5a;	
 }
 
+.container-fluid {
+    height: 100%;
+    vertical-align:middle;
+}
+
 .fullheight {
 	height: 20% !important;
 }
