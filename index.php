@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="the consultants, punk rock">
+    <meta name="author" content="Davide Trevisan | azote.it">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title></title>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./js/html5shiv.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <link href="./css/carousel.css" rel="stylesheet">
+    <link href="./css/so.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-touch-icon-152x152.png">
+    
+  </head>
+  
+  <body id="events"> 
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-49496560-1', 'rubelli.com');
+      ga('send', 'pageview');
+    </script>
+    <div class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#myCarousel"><img src="./images/logo.svg" alt="The Consultants" class="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                <li><a href="#record"></a></li>
+                <li><a href="#drinkalltheminibar"></a></li>                
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
+      </ol>
+      
+       <div class="carousel-inner">
+	       <div class="item active"><img src="./images/a.jpg" alt=""></div>
+           <div class="item"><img src="./images/b.jpg" alt=""></div>
+           <div class="item"><img src="./images/c.jpg" alt=""></div>
+           <div class="item"><img src="./images/d.jpg" alt=""></div>
+           <div class="item"><img src="./images/e.jpg" alt=""></div>
+           <div class="item"><img src="./images/f.jpg" alt=""></div>
+           <div class="item"><img src="./images/g.jpg" alt=""></div>
+           <div class="item"><img src="./images/h.jpg" alt=""></div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+    
+
+    <div class="container">
+    
+      <div class="row" id="record">
+        <div class="col-md-12">
+          <p>Recording Page</p>
+        </div>
+      </div>
+
+      <div class="row" id="drinkalltheminibar">
+        <div class="col-md-12">
+          <h3 class="featurette-heading">Drink All The Minibar!</h3>
+        </div>
+      </div>
+      <div class="row">
+			<div class="col-md-12">
+            	Instagram pictures
+			</div>
+      </div>
+
+      <div class="row" id="downloads">
+        <div class="col-md-12">
+			<div class="col-md-6"><p class="text-center"><br><a href=""><button type="button" class="progress-button" >Download Button</button></a></p></div>
+            <div class="col-md-6"><p class="text-center"><br><a href=""><button type="button" class="progress-button" >Download Button</button></a></p></div>
+        </div>
+      </div>
+   
+      <div class="row" id="contact">
+        <div class="col-md-4">
+		<h3 class="featurette-heading">CONTACT</h3>
+        <p>Booking<br>
+        Tommaso Trevisan<br>
+        <a href="#">mail??</a>
+</p>
+		</div>
+        <div class="col-md-8">
+        <form id="mailForm" action="sendmail.php" method="get" enctype="multipart/form-data">
+            <label for="message">Message</label> *<br>
+            <textarea name="message" id="message" title="message" class="fitwidth"></textarea><br><br>
+            
+            <label for="sender">Email</label> *<br>
+            <input type="text" name="sender" id="sender" class="fitwidth"><br><br>
+            
+            <button type="submit" class="progress-button" data-style="fill" data-horizontal>Send</button>
+        </form>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; <?php echo date('Y'); ?> The Consultants</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="./js/holder.js"></script>
+    <script>
+	//doc ready
+
+	<?php
+		$url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$url_length = strlen($url);
+	?>
+		
+	$(function() {
+		// slide on page e testi gallery
+		$("a[href^='#']").on('click', function(e) {
+			$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+			if($(this).hasClass('shownext')){
+				//$('.hideme').slideToggle();
+				$(this).parent().find('.hideme').slideToggle();
+			}
+			e.preventDefault();
+		});
+		// apri link in blank
+		$("a").click(function () {
+			if(this.href.substr(0,<?php echo $url_length; ?>)!="<?php echo $url; ?>"){
+				window.open(this.href);
+				return false;
+			}
+		});
+	});
+	
+	$( window ).load(function() {
+		// init carousel
+		$('.carousel').carousel({
+		  interval: 2000
+		});
+	});
+	</script>
+	<script src="./js/classie.js"></script>
+	<script src="./js/progressButton.js"></script>
+	<script>
+		function jqxhr(instance, interval) {
+			var getVars = $("#mailForm").serialize();
+
+			$.get( "sendmail.php", getVars, function( data ){})
+			.done(function( data ) {
+				if(data == '1'){
+					instance._stop(0);
+					clearInterval( interval );
+				}
+				else {
+					instance._stop(-1);
+					clearInterval( interval );
+				}
+			})
+			.fail(function() {
+				instance._stop(-1);
+				clearInterval( interval );
+			});
+			return false;
+		}
+
+
+		[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
+			new ProgressButton( bttn, {
+				callback : function( instance ) {
+					var progress = 0,
+						interval = setInterval( function() {
+							progress = Math.min( progress + Math.random() * 0.1, 1 );
+							instance._setProgress( progress );
+								if( progress === 1 ) {
+								instance._stop(-1);
+								clearInterval( interval );
+							}
+						}, 200 );
+						jqxhr(instance, interval);
+				} 
+			} );
+		} );
+
+	</script>
+  </body>
+</html>
