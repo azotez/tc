@@ -20,7 +20,7 @@
     <script src="./js/modernizr.custom.js"></script>
 
     <link href="./css/carousel.css" rel="stylesheet">
-    <link href="./css/so.css" rel="stylesheet">
+    <link href="./css/tc.css" rel="stylesheet">
     
     <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-touch-icon-57x57.png">
@@ -55,8 +55,8 @@
         </div>
         <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav">
-                <li><a href="#record"></a></li>
-                <li><a href="#drinkalltheminibar"></a></li>                
+                <li><a href="#record">Sing With Us</a></li>
+                <li><a href="#drinkalltheminibar">#drinkalltheminibar</a></li>                
                 <li><a href="#downloads">Downloads</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div id="myCarousel" class="carousel slide">
+    <div id="myCarousel" class="carousel slide fullheight">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -93,13 +93,13 @@
 
     <div class="container">
     
-      <div class="row" id="record">
+      <div class="row fullheight" id="record">
         <div class="col-md-12">
           <p>Recording Page</p>
         </div>
       </div>
 
-      <div class="row" id="drinkalltheminibar">
+      <div class="row fullheight" id="drinkalltheminibar">
         <div class="col-md-12">
           <h3 class="featurette-heading">Drink All The Minibar!</h3>
         </div>
@@ -110,14 +110,14 @@
 			</div>
       </div>
 
-      <div class="row" id="downloads">
+      <div class="row fullheight" id="downloads">
         <div class="col-md-12">
 			<div class="col-md-6"><p class="text-center"><br><a href=""><button type="button" class="progress-button" >Download Button</button></a></p></div>
             <div class="col-md-6"><p class="text-center"><br><a href=""><button type="button" class="progress-button" >Download Button</button></a></p></div>
         </div>
       </div>
    
-      <div class="row" id="contact">
+      <div class="row fullheight" id="contact">
         <div class="col-md-4">
 		<h3 class="featurette-heading">CONTACT</h3>
         <p>Booking<br>
