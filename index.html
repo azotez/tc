@@ -85,6 +85,22 @@ nav {
         <section>Pimp</section>
         <section>Contact</section>
         <footer>Footer</footer>
-		
+
+<script>
+	$(function() {
+		// slide on page e testi gallery
+		$("a[href^='#']").on('click', function(e) {
+			$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+			e.preventDefault();
+		});
+		// apri link in blank
+		$("a").click(function () {
+			if(this.href.substr(0,<?php echo $url_length; ?>)!="<?php echo $url; ?>"){
+				window.open(this.href);
+				return false;
+			}
+		});
+	});
+</script>
 	</body>
 </html>
