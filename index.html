@@ -14,6 +14,7 @@
 
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fonts.css">
         
 		<link rel="shortcut icon" href="./img/favicons/favicon.ico">
         <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
@@ -55,24 +56,133 @@ background-image: -webkit-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
 background-image: -ms-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
 background-image: linear-gradient(to left top, #1313F2 0%, #30C8FF 100%);
 }
+#navalt {
+    background-image: none;
+    position:fixed;
+    z-index:1020;
+    display:none;
+    background-color:#99ccff;
+    text-align:center;
+}
+#navalt-img {
+    width: 84%;
+}
 nav {
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
+  font-size: 28px;
+  line-height: 35px;
+  width:49px;
+  vertical-align:middle;
+  text-align:center;
+}
+nav button {
+    position:relative;
+	padding: 0;
+	margin: 0;
+    top:0;
+    left:0;
+    width:49px;
+    height:49px;
+    background:transparent;
+    border:0;
+}
+nav ul {
+	display: none;
+	position:relative;
+    left:0;
+	padding:0;
+	margin:0;
+    width:49px;
+    overflow:hidden;
+}
+nav ul li {
+    border-left:4px solid #e02726;
+	padding: 7px;
+}
+nav button, nav a {
+    color:#FFF;
+    text-decoration:none;
+}
+.bigtext{
+    font-family:Arial;
+}
+.theme.bigtext{
+    font-family:Arial;
+}
+#drinkalltheminibar img {
+    width: 35%;
+    margin: 0 auto;
+    display:block;
+}
+#drinkalltheminibar {
+    
 }
 		</style>
     </head>
     
 	<body>
 		
-		<nav>Menu</nav>
-		<section style="background:url('./img/top.jpg'); background-size: cover; background-position:center;">A</section>
-        <section>B</section>
-        <section>C</section>
-        <section>D</section>
-        <section>E</section>
+        <nav>
+            <button type="button" data-icon="l"></button>
+            <ul>
+                <li><a href="#watch" data-icon="U" data-image="watch.svg" title="Watch"></a></li>
+                <li><a href="#listen" data-icon="f" title="Listen" data-image="listen.svg"></a></li>
+                <li><a href="#sing" data-icon="q" title="Sing" data-image="sing.svg"></a></li>
+                <li><a href="#drinkalltheminibar" data-icon="C" title="#drinkalltheminibar" data-image="drink.svg"></a></li>
+                <li><a href="#live" data-icon="j" title="Live" data-image="live.svg"></a></li>
+                <li><a href="#pimp" data-icon="W" title="Pimp" data-image="pimp.svg"></a></li>
+                <li><a href="#contact" data-icon="N" title="Contact" data-image="contact.svg"></a></li>
+            </ul>
+        </nav>
+        <section id="navalt"><div><img id="navalt-img" src="" /></div></section>
+        <section id="watch" style="background:url('./img/top.jpg'); background-size: cover; background-position:center;"></section>
+        <section id="listen">Listen</section>
+        <section id="sing">Sing</section>
+        <section id="drinkalltheminibar"><img src="./img/datm.svg" alt="drinkalltheminibar" /></section>
+        <section id="live">Live</section>
+        <section id="pimp">Pimp</section>
+        <section id="contact">Contact</section>
         <footer>Footer</footer>
-		
-	</body>
+        
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+       
+        <script>
+
+        $(function() {
+        
+            $("nav button").click(function() {
+              $("nav ul").slideToggle(150);
+            });
+            
+    
+            // slide on page e testi gallery
+            $("a[href^='#']").click(function() {
+                $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+                e.preventDefault();
+            });
+            /*
+            // apri link in blank
+            $("a").click(function() {
+                if(this.href.substr(0,<?php echo $url_length; ?>)!="<?php echo $url; ?>"){
+                    window.open(this.href);
+                    return false;
+                }
+            });
+            */
+                        
+            $("nav a").hover(function() {
+              $("#navalt-img").attr("src", './img/'+$(this).attr('data-image'));
+              $("#navalt").fadeToggle(150);
+            }, function(){
+              // out function
+              $("#navalt").fadeToggle(150);    
+            });
+        
+        });
+
+        </script>
+    </body>
 </html>

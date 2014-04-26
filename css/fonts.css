@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("fonts/untitled-font-1.eot");
+  src:url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-1.woff") format("woff"),
+    url("fonts/untitled-font-1.ttf") format("truetype"),
+    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fontawesome-webfont:before {
+  content: "a";
+}
+.icon-fontawesome-webfont-3:before {
+  content: "d";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "b";
+}
+.icon-fontawesome-webfont-2:before {
+  content: "c";
+}
+.icon-fontawesome-webfont:before {
+  content: "a";
+}
+.icon-fontawesome-webfont-4:before {
+  content: "e";
+}
+.icon-fontawesome-webfont:before {
+  content: "a";
+}
+.icon-fontawesome-webfont-5:before {
+  content: "f";
+}
+.icon-fontawesome-webfont-6:before {
+  content: "g";
+}
+.icon-fontawesome-webfont-4:before {
+  content: "e";
+}
+.icon-calendar:before {
+  content: "j";
+}
+.icon-calendar-1:before {
+  content: "k";
+}
+.icon-list:before {
+  content: "l";
+}
+.icon-play:before {
+  content: "m";
+}
+.icon-fast-forward:before {
+  content: "n";
+}
+.icon-pause:before {
+  content: "o";
+}
+.icon-stop:before {
+  content: "p";
+}
+.icon-fontawesome-webfont-9:before {
+  content: "q";
+}
+.icon-fontawesome-webfont-10:before {
+  content: "r";
+}
+.icon-social-facebook:before {
+  content: "b";
+}
+.icon-social-twitter:before {
+  content: "c";
+}
+.icon-social-vimeo:before {
+  content: "e";
+}
+.icon-social-tumblr:before {
+  content: "i";
+}
+.icon-social-youtube:before {
+  content: "s";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "t";
+}
+.icon-fontawesome-webfont-2:before {
+  content: "u";
+}
+.icon-fontawesome-webfont-4:before {
+  content: "v";
+}
+.icon-fontawesome-webfont-8:before {
+  content: "w";
+}
+.icon-fontawesome-webfont-11:before {
+  content: "x";
+}
+.icon-fontawesome-webfont-13:before {
+  content: "z";
+}
+.icon-fontawesome-webfont-14:before {
+  content: "A";
+}
+.icon-fontawesome-webfont-15:before {
+  content: "B";
+}
+.icon-fontawesome-webfont-16:before {
+  content: "C";
+}
+.icon-fontawesome-webfont-17:before {
+  content: "D";
+}
+.icon-alert:before {
+  content: "E";
+}
+.icon-fast-backward:before {
+  content: "F";
+}
+.icon-fast-forward-1:before {
+  content: "G";
+}
+.icon-play-1:before {
+  content: "I";
+}
+.icon-youtube-alt:before {
+  content: "K";
+}
+.icon-rss:before {
+  content: "L";
+}
+.icon-fontawesome-webfont-18:before {
+  content: "N";
+}
+.icon-pause-1:before {
+  content: "P";
+}
+.icon-paypal:before {
+  content: "O";
+}
+.icon-to-end:before {
+  content: "Q";
+}
+.icon-to-start:before {
+  content: "R";
+}
+.icon-vimeo:before {
+  content: "S";
+}
+.icon-fontawesome-webfont-19:before {
+  content: "T";
+}
+.icon-fontawesome-webfont-20:before {
+  content: "U";
+}
+.icon-instagrem:before {
+  content: "V";
+}
+.icon-basket:before {
+  content: "W";
+}
+.icon-soundcloud-1:before {
+  content: "h";
+}
+.icon-datm:before {
+  content: "d";
+}
+.icon-datm:before {
+  content: "d";
+}
+.icon-datm:before {
+  content: "d";
+}
+.icon-datm:before {
+  content: "d";
+}
+.icon-design-azote:before {
+  content: "y";
+}
