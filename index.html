@@ -125,6 +125,7 @@ nav button, nav a {
     
 	<body>
 		
+<<<<<<< HEAD
         <nav>
             <button type="button" data-icon="l"></button>
             <ul>
@@ -185,4 +186,43 @@ nav button, nav a {
 
         </script>
     </body>
+=======
+		<nav>
+<ul>
+<li>Watch</li>
+<li>Listen</li>
+<li>Sing</li>
+<li>#drinkalltheminibar</li>
+<li>Live</li>
+<li>Pimp</li>
+<li>Contact</li>
+</ul>
+</nav>
+		<section style="background:url('./img/top.jpg'); background-size: cover; background-position:center;">Watch</section>
+        <section>Listen</section>
+        <section>Sing</section>
+        <section>#drinkalltheminibar</section>
+        <section>Live</section>
+        <section>Pimp</section>
+        <section>Contact</section>
+        <footer>Footer</footer>
+
+<script>
+	$(function() {
+		// slide on page e testi gallery
+		$("a[href^='#']").on('click', function(e) {
+			$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+			e.preventDefault();
+		});
+		// apri link in blank
+		$("a").click(function () {
+			if(this.href.substr(0,<?php echo $url_length; ?>)!="<?php echo $url; ?>"){
+				window.open(this.href);
+				return false;
+			}
+		});
+	});
+</script>
+	</body>
+>>>>>>> 31f1ea9de551d0570494af53b5c2b939e077e124
 </html>
