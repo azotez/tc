@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -100,16 +104,17 @@ nav button, nav a {
 .theme.bigtext{
     font-family:Arial;
 }
-#drinkalltheminibar, #navalt {
+.table_centered {
     display:table;
     text-align:center;
 }
-#drinkalltheminibar div, #navalt div {
+.cell_centered {
     display:table-cell;
     vertical-align:middle;
 }
-#drinkalltheminibar img {
+#datm-logo {
     width: 35%;
+    z-index:1010;
 }
 #navalt-img {
     width: 77%;
@@ -160,11 +165,18 @@ nav button, nav a {
                 <li><a href="#contact" data-icon="N" title="Contact" data-image="contact.svg" data-color="#c82790"></a></li>
             </ul>
         </nav>
-        <section id="navalt"><div><img id="navalt-img" /></div></section>
+        <section id="navalt" class="table_centered"><div class="cell_centered"><img id="navalt-img" alt="" /></div></section>
         <section id="watch" style="background:url('./img/top.jpg'); background-size: cover; background-position:center;"></section>
         <section id="listen">Listen</section>
         <section id="sing">Sing</section>
-        <section id="drinkalltheminibar"><div><img src="./img/datm.svg" alt="drinkalltheminibar" /></div><?php include('./php/instagram.php'); ?></section>
+        <section id="drinkalltheminibar" class="table_centered">
+            <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></div>
+            <progress value="0" id="drinkalltheminibar-prog">
+				<div class="proggress-bar">
+					<div id="drinkalltheminibar-progfb"></div>
+				</div>
+			</progress>
+        </section>
         <section id="live">Live</section>
         <section id="pimp">Pimp</section>
         <section id="contact">Contact</section>
@@ -208,6 +220,8 @@ nav button, nav a {
             });
 
         });
+
+        <?php require('./php/instagram.php'); ?>
 
         </script>
     </body>
