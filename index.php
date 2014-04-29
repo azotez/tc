@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
+<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -44,7 +44,7 @@ section {
 	display:inline-block;
 	width:100%;
 	height:100%;
-	padding: 28px 0 0 0;
+	padding: 0;
 	margin: 0;
 	max-width: 100%;
 	background-image: -webkit-gradient(
@@ -148,7 +148,85 @@ nav button, nav a {
   -o-animation:      strobo 100ms infinite; /* Opera 12+ */
   animation:         strobo 100ms infinite; /* IE 10+ */
 }
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  z-index: 1400;
+  display: block;
+  background: #1d8bac;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.progress-bar div {
+  background: #acdbea;
+  display: relative;
+  float:left;
+  height: 100%;
+  width: 0%;
+}
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+		{
+  z-index: 1400;
+  position:relative;
 
+  /* Turns off styling - not usually needed, but good to know. */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  /* gets rid of default border in Firefox and Opera. */
+  border: none;
+
+  /* Needs to be in here for Safari polyfill so background images work as expected. */
+  background-size: auto;
+
+  /* Dimensions */
+  width: 100%;
+  height: 100%;
+
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+   transition: all 0.3s ease-in;
+}
+/* Polyfill */
+progress[role]:after {
+  background-image: none; /* removes default background from polyfill */
+  }
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+  display: none;
+}
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+  background: #1d8bac !important; /* !important is needed by the polyfill */
+}
+/* Chrome */
+progress::-webkit-progress-bar {
+  background: #1d8bac;
+}
+/* IE10 */
+progress {
+  color: #acdbea;
+}
+/* Firefox */
+progress::-moz-progress-bar {
+  background: #acdbea;
+}
+/* Chrome */
+progress::-webkit-progress-value {
+  background: #acdbea;
+}
+/* Polyfill */
+progress[aria-valuenow]:before  {
+  background: #acdbea;
+}
 		</style>
     </head>
 
@@ -169,7 +247,7 @@ nav button, nav a {
         <section id="watch" style="background:url('./img/top.jpg'); background-size: cover; background-position:center;"></section>
         <section id="listen">Listen</section>
         <section id="sing">Sing</section>
-        <section id="drinkalltheminibar" class="table_centered">
+        <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
             <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></div>
             <progress value="0" id="drinkalltheminibar-prog">
 				<div class="proggress-bar">
@@ -183,10 +261,12 @@ nav button, nav a {
         <footer>Footer</footer>
 
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
 
         <script>
 
         $(function() {
+        //INIZIO DOC READY
 
             $("#navalt").fadeToggle();
 
@@ -200,10 +280,11 @@ nav button, nav a {
                 $("#navalt").css("background", "none");
                 e.preventDefault();
             });
+
             /*
             // apri link in blank
             $("a").click(function() {
-                if(this.href.substr(0,<?php echo $url_length; ?>)!="<?php echo $url; ?>"){
+                if(window.location.href.indexOf('theconsultants.it')<1){
                     window.open(this.href);
                     return false;
                 }
@@ -218,10 +299,26 @@ nav button, nav a {
               // out function
               $("#navalt").fadeToggle(150);
             });
-
         });
 
-        <?php require('./php/instagram.php'); ?>
+            // #DRINKALLTHEMINIBAR
+            <?php require('./php/instagram.php'); ?>
+
+            // da qui serve plugin jquery.appear
+            var div2play = document.getElementById("drinkalltheminibar");
+            $('#drinkalltheminibar').appear();
+            $(document.body).on('appear', '#drinkalltheminibar', function(e, $affected) {
+                if(div2play.getAttribute("data-play") == 0){
+                    preloadAll();
+                }
+            });
+            $(document.body).on('disappear', '#drinkalltheminibar', function(e, $affected) {
+                if(div2play.getAttribute("data-play") == 1){
+                    clearInterval(div2play.loop);
+                    div2play.setAttribute("data-play", 0);
+                }
+            });
+            // FINE #DRINKALLTHEMINIBAR
 
         </script>
     </body>

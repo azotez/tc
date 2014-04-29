@@ -33,12 +33,13 @@ foreach($results['data'] as $item){
 ";
 }
 ?>
+
         function loadSerie(div2play, tot, prog, progfb){
 
             var album=[], L=tot, tem, url;
 			div2play.style.cursor='progress';
 
-            for(var i=0; i < data.length; i++){
+            for(var i=0; i < tot; i++){
                 tem= new Image;
                 url= data[i];
                 tem.onload= function(){
@@ -63,20 +64,22 @@ foreach($results['data'] as $item){
                 if(L==album.length){
                     clearInterval(div2play.tryAlbum);
                     div2play.tryAlbum = null;
-					div2play.style.cursor = 'pointer';
 					window.isPreloading = false;
+                    div2play.style.cursor='default';
                     return playTimelapse(div2play, tot);
                 }
             },
-            100);
+            200);
         }
 
         function playTimelapse(div2play, tot){
 
 			var prog = document.getElementById("drinkalltheminibar-prog");
 			var progfb   = document.getElementById("drinkalltheminibar-progfb");
-			prog.style.bottom = "-7px";
+			/*
+            prog.style.bottom = "-7px";
 			progfb.style.bottom = "-7px";
+            */
 
 			if(div2play.getAttribute("data-play") == 1){
 				clearInterval(div2play.loop);
@@ -92,7 +95,7 @@ foreach($results['data'] as $item){
 					if(c>tot){
 						c=0;
 					}
-				}, 150);
+				}, 200);
 			}
 
         }
@@ -100,15 +103,12 @@ foreach($results['data'] as $item){
         function preloadAll(){
 			if(window.isPreloading == false){
 				var div2play = document.getElementById("drinkalltheminibar");
-				var tot = data.length;
+				var tot = data.length-1;
 				var prog = document.getElementById("drinkalltheminibar-prog");
 				var progfb = document.getElementById("drinkalltheminibar-progfb");
-				prog.style.bottom = "0";
-				progfb.style.bottom = "0";
 				window.isPreloading = true;
 	            loadSerie(div2play, tot, prog, progfb);
 			}
         }
 
         var isPreloading = false;
-        preloadAll();
