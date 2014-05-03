@@ -114,7 +114,9 @@ nav button, nav a {
 }
 #datm-logo {
     width: 35%;
-    z-index:1010;
+    padding: 1%;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0);
 }
 #navalt-img {
     width: 77%;
@@ -148,86 +150,56 @@ nav button, nav a {
   -o-animation:      strobo 100ms infinite; /* Opera 12+ */
   animation:         strobo 100ms infinite; /* IE 10+ */
 }
-.progress-bar {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  z-index: 1400;
-  display: block;
-  background: #1d8bac;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+@-webkit-keyframes borderfade {
+  0% { background-color: rgba(255,255,255,0.1); }
+  50%   { background-color: rgba(255,255,255,0.3); }
+  100% { background-color: rgba(255,255,255,0.1); }
 }
-.progress-bar div {
-  background: #acdbea;
-  display: relative;
-  float:left;
-  height: 100%;
-  width: 0%;
+@-moz-keyframes borderfade {
+  0% { background-color: rgba(255,255,255,0.1); }
+  50%   { background-color: rgba(255,255,255,0.3); }
+  100% { background-color: rgba(255,255,255,0.1); }
 }
-progress,          /* All HTML5 progress enabled browsers */
-progress[role]     /* polyfill */
-		{
-  z-index: 1400;
-  position:relative;
-
-  /* Turns off styling - not usually needed, but good to know. */
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-
-  /* gets rid of default border in Firefox and Opera. */
-  border: none;
-
-  /* Needs to be in here for Safari polyfill so background images work as expected. */
-  background-size: auto;
-
-  /* Dimensions */
-  width: 100%;
-  height: 100%;
-
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-   transition: all 0.3s ease-in;
+@-o-keyframes borderfade {
+  0% { background-color: rgba(255,255,255,0.1); }
+  50%   { background-color: rgba(255,255,255,0.3); }
+  100% { background-color: rgba(255,255,255,0.1); }
 }
-/* Polyfill */
-progress[role]:after {
-  background-image: none; /* removes default background from polyfill */
-  }
-/* Ensure fallback text doesn't appear in polyfill */
-progress[role] strong {
-  display: none;
+@keyframes borderfade {
+  0% { background-color: rgba(255,255,255,0.1); }
+  50%   { background-color: rgba(255,255,255,0.3); }
+  100% { background-color: rgba(255,255,255,0.1); }
 }
-progress,                          /* Firefox  */
-progress[role][aria-valuenow] {    /* Polyfill */
-  background: #1d8bac !important; /* !important is needed by the polyfill */
+.borderfadeloop {
+  -webkit-animation: borderfade 2s infinite; /* Safari 4+ */
+  -moz-animation:    borderfade 2s infinite; /* Fx 5+ */
+  -o-animation:      borderfade 2s infinite; /* Opera 12+ */
+  animation:         borderfade 2s infinite; /* IE 10+ */
 }
-/* Chrome */
-progress::-webkit-progress-bar {
-  background: #1d8bac;
+@-webkit-keyframes borderfadeout {
+  from { background-color: rgba(255,255,255,0.3); }
+  to   { background-color: rgba(255,255,255,0); }
 }
-/* IE10 */
-progress {
-  color: #acdbea;
+@-moz-keyframes borderfadeout {
+  from { background-color: rgba(255,255,255,0.3); }
+  to   { background-color: rgba(255,255,255,0); }
 }
-/* Firefox */
-progress::-moz-progress-bar {
-  background: #acdbea;
+@-o-keyframes borderfadeout {
+  from { background-color: rgba(255,255,255,0.3); }
+  to   { background-color: rgba(255,255,255,0); }
 }
-/* Chrome */
-progress::-webkit-progress-value {
-  background: #acdbea;
+@keyframes borderfadeout {
+  from { background-color: rgba(255,255,255,0.3); }
+  to   { background-color: rgba(255,255,255,0); }
 }
-/* Polyfill */
-progress[aria-valuenow]:before  {
-  background: #acdbea;
+.borderfadeloopout {
+  -webkit-animation: borderfadeout 3s; /* Safari 4+ */
+  -moz-animation:    borderfadeout 3s; /* Fx 5+ */
+  -o-animation:      borderfadeout 3s; /* Opera 12+ */
+  animation:         borderfadeout 3s; /* IE 10+ */
+  animation:         borderfadeout 3s; /* IE 10+ */
 }
-		</style>
+</style>
     </head>
 
 	<body>
@@ -238,7 +210,7 @@ progress[aria-valuenow]:before  {
                 <li><a href="#listen" data-icon="f" title="Listen" data-image="listen.svg" data-color="#f15623"></a></li>
                 <li><a href="#sing" data-icon="q" title="Sing" data-image="sing.svg" data-color="#fbdd00"></a></li>
                 <li><a href="#live" data-icon="j" title="Live" data-image="live.svg" data-color="#74c044"></a></li>
-                <li><a href="#drinkalltheminibar" data-icon="C" title="#drinkalltheminibar" data-image="drink.svg" data-color="#00a9ea"></a></li>
+                <li><a href="#drinkalltheminibar" data-icon="C" title="#drinkalltheminibar" data-image="drink.svg" data-color="#00a9ea" class="borderfadeloop"></a></li>
                 <li><a href="#pimp" data-icon="W" title="Pimp" data-image="pimp.svg" data-color="#1d439b"></a></li>
                 <li><a href="#contact" data-icon="N" title="Contact" data-image="contact.svg" data-color="#c82790"></a></li>
             </ul>
@@ -248,12 +220,7 @@ progress[aria-valuenow]:before  {
         <section id="listen">Listen</section>
         <section id="sing">Sing</section>
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
-            <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></div>
-            <progress value="0" id="drinkalltheminibar-prog">
-				<div class="proggress-bar">
-					<div id="drinkalltheminibar-progfb"></div>
-				</div>
-			</progress>
+            <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" class="borderfadeloop" /></div>
         </section>
         <section id="live">Live</section>
         <section id="pimp">Pimp</section>
@@ -262,6 +229,7 @@ progress[aria-valuenow]:before  {
 
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/vendor/jquery.appear.js"></script>
+        <script src="js/vendor/jquery.tubular.1.0.js"></script>
 
         <script>
 
@@ -299,7 +267,11 @@ progress[aria-valuenow]:before  {
               // out function
               $("#navalt").fadeToggle(150);
             });
-        });
+            
+            
+            //$('#watch').tubular({videoId: 'sV-2tIB9G5w', mute: false,});
+            
+        });//FINE DOC READY
 
             // #DRINKALLTHEMINIBAR
             <?php require('./php/instagram.php'); ?>

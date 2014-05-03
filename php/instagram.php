@@ -33,8 +33,7 @@ foreach($results['data'] as $item){
 ";
 }
 ?>
-
-        function loadSerie(div2play, tot, prog, progfb){
+        function loadSerie(div2play, tot, prog){
 
             var album=[], L=tot, tem, url;
 			div2play.style.cursor='progress';
@@ -43,8 +42,7 @@ foreach($results['data'] as $item){
                 tem= new Image;
                 url= data[i];
                 tem.onload= function(){
-                    prog.value += 1;
-					progfb.width = (i/tot)*100+"%";
+                    //prog.value += 1;
                     album.push(this.src);
                 }
                 tem.onerror= function(){
@@ -65,6 +63,7 @@ foreach($results['data'] as $item){
                     clearInterval(div2play.tryAlbum);
                     div2play.tryAlbum = null;
 					window.isPreloading = false;
+                    prog.className = "borderfadeloopout";
                     div2play.style.cursor='default';
                     return playTimelapse(div2play, tot);
                 }
@@ -73,13 +72,6 @@ foreach($results['data'] as $item){
         }
 
         function playTimelapse(div2play, tot){
-
-			var prog = document.getElementById("drinkalltheminibar-prog");
-			var progfb   = document.getElementById("drinkalltheminibar-progfb");
-			/*
-            prog.style.bottom = "-7px";
-			progfb.style.bottom = "-7px";
-            */
 
 			if(div2play.getAttribute("data-play") == 1){
 				clearInterval(div2play.loop);
@@ -103,11 +95,10 @@ foreach($results['data'] as $item){
         function preloadAll(){
 			if(window.isPreloading == false){
 				var div2play = document.getElementById("drinkalltheminibar");
+                var prog = document.getElementById("datm-logo");
 				var tot = data.length-1;
-				var prog = document.getElementById("drinkalltheminibar-prog");
-				var progfb = document.getElementById("drinkalltheminibar-progfb");
 				window.isPreloading = true;
-	            loadSerie(div2play, tot, prog, progfb);
+	            loadSerie(div2play, tot, prog);
 			}
         }
 
