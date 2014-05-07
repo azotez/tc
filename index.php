@@ -39,15 +39,8 @@ html {
 }
 body {
 	height:100%;
-}
-section {
-	display:inline-block;
-	width:100%;
-	height:100%;
-	padding: 0;
-	margin: 0;
-	max-width: 100%;
-	background-image: -webkit-gradient(
+    /*
+    background-image: -webkit-gradient(
 	linear,
 	left top,
 	left top,
@@ -59,6 +52,15 @@ background-image: -moz-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
 background-image: -webkit-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
 background-image: -ms-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
 background-image: linear-gradient(to left top, #1313F2 0%, #30C8FF 100%);
+*/
+}
+section {
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
 }
 nav {
   position: fixed;
@@ -126,7 +128,41 @@ nav button, nav a {
     background-image: none;
     position:fixed;
     z-index:1020;
-    background-color:#99ccff;
+}
+#watch {
+    /*background-color:#ed1c24;
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left top,
+	color-stop(0, #000000),
+	color-stop(1px, transparent)
+);
+background-image: -o-linear-gradient(left top, #000000 0px, transparent 1px);
+background-image: -moz-linear-gradient(left top, #000000 0px, transparent 1px);
+background-image: -webkit-linear-gradient(left top, #000000 0px, transparent 1px);
+background-image: -ms-linear-gradient(left top, #000000 0px, transparent 1px);
+background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
+    background-repeat: repeat;
+    background-image: url('./img/back.gif');
+}
+#listen {
+    background-color:#f15623;
+}
+#sing {
+    background-color:#fbdd00;
+}
+#live {
+    background-color:#74c044;
+}
+#drinkalltheminibar {
+    background-color:#00a9ea;
+}
+#pimp {
+    background-color:#1d439b;
+}
+#contact {
+    background-color:#c82790;
 }
 @-webkit-keyframes strobo {
   0%   { opacity: 0; }
@@ -152,52 +188,52 @@ nav button, nav a {
 }
 @-webkit-keyframes borderfade {
   0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.3); }
+  50%   { background-color: rgba(255,255,255,0.4); }
   100% { background-color: rgba(255,255,255,0.1); }
 }
 @-moz-keyframes borderfade {
   0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.3); }
+  50%   { background-color: rgba(255,255,255,0.4); }
   100% { background-color: rgba(255,255,255,0.1); }
 }
 @-o-keyframes borderfade {
   0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.3); }
+  50%   { background-color: rgba(255,255,255,0.4); }
   100% { background-color: rgba(255,255,255,0.1); }
 }
 @keyframes borderfade {
   0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.3); }
+  50%   { background-color: rgba(255,255,255,0.4); }
   100% { background-color: rgba(255,255,255,0.1); }
 }
 .borderfadeloop {
-  -webkit-animation: borderfade 2s infinite; /* Safari 4+ */
-  -moz-animation:    borderfade 2s infinite; /* Fx 5+ */
-  -o-animation:      borderfade 2s infinite; /* Opera 12+ */
-  animation:         borderfade 2s infinite; /* IE 10+ */
+  -webkit-animation: borderfade 0.5s infinite; /* Safari 4+ */
+  -moz-animation:    borderfade 0.5s infinite; /* Fx 5+ */
+  -o-animation:      borderfade 0.5s infinite; /* Opera 12+ */
+  animation:         borderfade 0.5s infinite; /* IE 10+ */
 }
 @-webkit-keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.3); }
+  from { background-color: rgba(255,255,255,0.4); }
   to   { background-color: rgba(255,255,255,0); }
 }
 @-moz-keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.3); }
+  from { background-color: rgba(255,255,255,0.4); }
   to   { background-color: rgba(255,255,255,0); }
 }
 @-o-keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.3); }
+  from { background-color: rgba(255,255,255,0.4); }
   to   { background-color: rgba(255,255,255,0); }
 }
 @keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.3); }
+  from { background-color: rgba(255,255,255,0.4); }
   to   { background-color: rgba(255,255,255,0); }
 }
 .borderfadeloopout {
-  -webkit-animation: borderfadeout 3s; /* Safari 4+ */
-  -moz-animation:    borderfadeout 3s; /* Fx 5+ */
-  -o-animation:      borderfadeout 3s; /* Opera 12+ */
-  animation:         borderfadeout 3s; /* IE 10+ */
-  animation:         borderfadeout 3s; /* IE 10+ */
+  -webkit-animation: borderfadeout 2s; /* Safari 4+ */
+  -moz-animation:    borderfadeout 2s; /* Fx 5+ */
+  -o-animation:      borderfadeout 2s; /* Opera 12+ */
+  animation:         borderfadeout 2s; /* IE 10+ */
+  animation:         borderfadeout 2s; /* IE 10+ */
 }
 </style>
     </head>
@@ -210,13 +246,13 @@ nav button, nav a {
                 <li><a href="#listen" data-icon="f" title="Listen" data-image="listen.svg" data-color="#f15623"></a></li>
                 <li><a href="#sing" data-icon="q" title="Sing" data-image="sing.svg" data-color="#fbdd00"></a></li>
                 <li><a href="#live" data-icon="j" title="Live" data-image="live.svg" data-color="#74c044"></a></li>
-                <li><a href="#drinkalltheminibar" data-icon="C" title="#drinkalltheminibar" data-image="drink.svg" data-color="#00a9ea" class="borderfadeloop"></a></li>
+                <li><a href="#drinkalltheminibar" data-icon="C" title="#drinkalltheminibar" data-image="drink.svg" data-color="#00a9ea"></a></li>
                 <li><a href="#pimp" data-icon="W" title="Pimp" data-image="pimp.svg" data-color="#1d439b"></a></li>
                 <li><a href="#contact" data-icon="N" title="Contact" data-image="contact.svg" data-color="#c82790"></a></li>
             </ul>
         </nav>
         <section id="navalt" class="table_centered"><div class="cell_centered"><img id="navalt-img" alt="" /></div></section>
-        <section id="watch" style="background:url('./img/top.jpg'); background-size: cover; background-position:center;"></section>
+        <section id="watch">Watch</section>
         <section id="listen">Listen</section>
         <section id="sing">Sing</section>
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
@@ -269,7 +305,7 @@ nav button, nav a {
             });
             
             
-            //$('#watch').tubular({videoId: 'sV-2tIB9G5w', mute: false,});
+            $('#watch').tubular({videoId: 'sV-2tIB9G5w', mute: false, wrapperZIndex: 3});
             
         });//FINE DOC READY
 
