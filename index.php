@@ -114,12 +114,6 @@ nav button, nav a {
     display:table-cell;
     vertical-align:middle;
 }
-#datm-logo {
-    width: 35%;
-    padding: 1%;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0);
-}
 #navalt-img {
     width: 77%;
     padding-left:25px;
@@ -186,6 +180,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
   -o-animation:      strobo 100ms infinite; /* Opera 12+ */
   animation:         strobo 100ms infinite; /* IE 10+ */
 }
+/*
 @-webkit-keyframes borderfade {
   0% { background-color: rgba(255,255,255,0.1); }
   50%   { background-color: rgba(255,255,255,0.4); }
@@ -206,11 +201,12 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
   50%   { background-color: rgba(255,255,255,0.4); }
   100% { background-color: rgba(255,255,255,0.1); }
 }
+
 .borderfadeloop {
-  -webkit-animation: borderfade 0.5s infinite; /* Safari 4+ */
-  -moz-animation:    borderfade 0.5s infinite; /* Fx 5+ */
-  -o-animation:      borderfade 0.5s infinite; /* Opera 12+ */
-  animation:         borderfade 0.5s infinite; /* IE 10+ */
+  -webkit-animation: borderfade 0.5s infinite; 
+  -moz-animation:    borderfade 0.5s infinite; 
+  -o-animation:      borderfade 0.5s infinite; 
+  animation:         borderfade 0.5s infinite; 
 }
 @-webkit-keyframes borderfadeout {
   from { background-color: rgba(255,255,255,0.4); }
@@ -229,11 +225,39 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
   to   { background-color: rgba(255,255,255,0); }
 }
 .borderfadeloopout {
-  -webkit-animation: borderfadeout 2s; /* Safari 4+ */
-  -moz-animation:    borderfadeout 2s; /* Fx 5+ */
-  -o-animation:      borderfadeout 2s; /* Opera 12+ */
-  animation:         borderfadeout 2s; /* IE 10+ */
-  animation:         borderfadeout 2s; /* IE 10+ */
+  -webkit-animation: borderfadeout 2s; 
+  -moz-animation:    borderfadeout 2s; 
+  -o-animation:      borderfadeout 2s; 
+  animation:         borderfadeout 2s; 
+  animation:         borderfadeout 2s; 
+}
+*/
+        
+@-webkit-keyframes waves {
+	from { background-position: 0px 0; }
+	to { background-position: 280px 0; }
+}
+@-moz-keyframes waves {
+	from { background-position: 0px 0; }
+	to { background-position: 280px 0; }
+}
+@-o-keyframes waves {
+	from { background-position: 0px 0; }
+	to { background-position: 280px 0; }
+}
+@keyframes waves {
+	from { background-position: 0px 0; }
+	to { background-position: 280px 0; }
+}
+#datm-logo {
+    width: 35%;
+    border-radius: 50%;
+    background-color: #009cc8;
+    background-image: url('./img/wave.svg');
+    -webkit-animation: waves 1.5s linear infinite; 
+    -moz-animation:    waves 1.5s linear infinite;
+    -o-animation:      waves 1.5s linear infinite;
+    animation:         waves 1.5s linear infinite;
 }
 </style>
     </head>

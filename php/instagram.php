@@ -42,6 +42,7 @@ foreach($results['data'] as $item){
                 tem= new Image;
                 url= data[i];
                 tem.onload= function(){
+                    //alert(prog.style.backgroundPosition);
                     //prog.value += 1;
                     album.push(this.src);
                 }
