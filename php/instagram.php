@@ -33,17 +33,21 @@ foreach($results['data'] as $item){
 ";
 }
 ?>
+
         function loadSerie(div2play, tot, prog){
 
-            var album=[], L=tot, tem, url;
+            var album=[], L=tot, tem, url, step_height, i;
 			div2play.style.cursor='progress';
+            step_height = Math.round(prog.offsetHeight/tot);
 
             for(var i=0; i < tot; i++){
-                tem= new Image;
+                tem= new Image;                
                 url= data[i];
+                // non passa giusto i!!!!!
                 tem.onload= function(){
-                    //alert(prog.style.backgroundPosition);
-                    //prog.value += 1;
+                    // increment
+                    alert(i);
+                    prog.style.backgroundPosition='0 '+step_height*i+'px';
                     album.push(this.src);
                 }
                 tem.onerror= function(){

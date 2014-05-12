@@ -254,10 +254,13 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
     border-radius: 50%;
     background-color: #009cc8;
     background-image: url('./img/wave.svg');
+    background-repeat:repeat-x;
+    /*
     -webkit-animation: waves 1.5s linear infinite; 
     -moz-animation:    waves 1.5s linear infinite;
     -o-animation:      waves 1.5s linear infinite;
     animation:         waves 1.5s linear infinite;
+    */
 }
 </style>
     </head>
