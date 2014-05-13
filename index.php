@@ -151,6 +151,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
 }
 #drinkalltheminibar {
     background-color:#00a9ea;
+    background-position: 50% 0;
 }
 #pimp {
     background-color:#1d439b;
@@ -180,87 +181,12 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
   -o-animation:      strobo 100ms infinite; /* Opera 12+ */
   animation:         strobo 100ms infinite; /* IE 10+ */
 }
-/*
-@-webkit-keyframes borderfade {
-  0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.4); }
-  100% { background-color: rgba(255,255,255,0.1); }
-}
-@-moz-keyframes borderfade {
-  0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.4); }
-  100% { background-color: rgba(255,255,255,0.1); }
-}
-@-o-keyframes borderfade {
-  0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.4); }
-  100% { background-color: rgba(255,255,255,0.1); }
-}
-@keyframes borderfade {
-  0% { background-color: rgba(255,255,255,0.1); }
-  50%   { background-color: rgba(255,255,255,0.4); }
-  100% { background-color: rgba(255,255,255,0.1); }
-}
-
-.borderfadeloop {
-  -webkit-animation: borderfade 0.5s infinite; 
-  -moz-animation:    borderfade 0.5s infinite; 
-  -o-animation:      borderfade 0.5s infinite; 
-  animation:         borderfade 0.5s infinite; 
-}
-@-webkit-keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.4); }
-  to   { background-color: rgba(255,255,255,0); }
-}
-@-moz-keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.4); }
-  to   { background-color: rgba(255,255,255,0); }
-}
-@-o-keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.4); }
-  to   { background-color: rgba(255,255,255,0); }
-}
-@keyframes borderfadeout {
-  from { background-color: rgba(255,255,255,0.4); }
-  to   { background-color: rgba(255,255,255,0); }
-}
-.borderfadeloopout {
-  -webkit-animation: borderfadeout 2s; 
-  -moz-animation:    borderfadeout 2s; 
-  -o-animation:      borderfadeout 2s; 
-  animation:         borderfadeout 2s; 
-  animation:         borderfadeout 2s; 
-}
-*/
-        
-@-webkit-keyframes waves {
-	from { background-position: 0px 0; }
-	to { background-position: 280px 0; }
-}
-@-moz-keyframes waves {
-	from { background-position: 0px 0; }
-	to { background-position: 280px 0; }
-}
-@-o-keyframes waves {
-	from { background-position: 0px 0; }
-	to { background-position: 280px 0; }
-}
-@keyframes waves {
-	from { background-position: 0px 0; }
-	to { background-position: 280px 0; }
-}
 #datm-logo {
     width: 35%;
     border-radius: 50%;
     background-color: #009cc8;
     background-image: url('./img/wave.svg');
     background-repeat:repeat-x;
-    /*
-    -webkit-animation: waves 1.5s linear infinite; 
-    -moz-animation:    waves 1.5s linear infinite;
-    -o-animation:      waves 1.5s linear infinite;
-    animation:         waves 1.5s linear infinite;
-    */
 }
 </style>
     </head>
@@ -283,7 +209,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
         <section id="listen">Listen</section>
         <section id="sing">Sing</section>
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
-            <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" class="borderfadeloop" /></div>
+            <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></div>
         </section>
         <section id="live">Live</section>
         <section id="pimp">Pimp</section>

@@ -33,23 +33,31 @@ foreach($results['data'] as $item){
 ";
 }
 ?>
+        var bg_x = 0;
+        var bg_y = 0;
 
+        function updateBgPos (prog){
+            bg_x+=10;
+            prog.style.backgroundPosition = bg_x+'px '+bg_y+'px';
+        }
+    
         function loadSerie(div2play, tot, prog){
 
-            var album=[], L=tot, tem, url, step_height;
+            var album=[], L=tot, tem, url, step_height, j;
 			div2play.style.cursor='progress';
             step_height = Math.round(prog.offsetHeight/tot);
+            
+            div2play.preloader = setInterval(function(){
+                updateBgPos(prog);
+            }, 30);
 
             for(var i=0; i<tot; i++){
                 tem = new Image;                
                 url = data[i];
-				tem.j = i;
-                // non passa giusto i!!!!!
+
                 tem.onload= function(){
-                    // increment
-                    alert(tem.j);
-                    prog.style.backgroundPosition='0 '+step_height*tem.j+'px';
                     album.push(this.src);
+                    bg_y+=step_height;
                 }
                 tem.onerror= function(){
                     if(typeof er== 'function') album.push(er(this.src));
@@ -61,20 +69,20 @@ foreach($results['data'] as $item){
                 if(tem.complete && tem.width> 0){
                     album.push(tem.src);
                     tem.onload= '';
+                    bg_y+=step_height;
                 }
             }
 
             div2play.tryAlbum = setInterval(function(){
                 if(L==album.length){
                     clearInterval(div2play.tryAlbum);
+                    clearInterval(div2play.preloader);
                     div2play.tryAlbum = null;
 					window.isPreloading = false;
-                    prog.className = "borderfadeloopout";
                     div2play.style.cursor='default';
                     return playTimelapse(div2play, tot);
                 }
-            },
-            200);
+            }, 200);
         }
 
         function playTimelapse(div2play, tot){
