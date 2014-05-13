@@ -1,8 +1,8 @@
 <?php
+/*
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-?>
-<?php
+*/
 function callInstagram($url){
     $ch = curl_init();
     curl_setopt_array($ch, array(
@@ -36,18 +36,19 @@ foreach($results['data'] as $item){
 
         function loadSerie(div2play, tot, prog){
 
-            var album=[], L=tot, tem, url, step_height, i;
+            var album=[], L=tot, tem, url, step_height;
 			div2play.style.cursor='progress';
             step_height = Math.round(prog.offsetHeight/tot);
 
-            for(var i=0; i < tot; i++){
-                tem= new Image;                
-                url= data[i];
+            for(var i=0; i<tot; i++){
+                tem = new Image;                
+                url = data[i];
+				tem.j = i;
                 // non passa giusto i!!!!!
                 tem.onload= function(){
                     // increment
-                    alert(i);
-                    prog.style.backgroundPosition='0 '+step_height*i+'px';
+                    alert(tem.j);
+                    prog.style.backgroundPosition='0 '+step_height*tem.j+'px';
                     album.push(this.src);
                 }
                 tem.onerror= function(){
