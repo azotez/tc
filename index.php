@@ -188,6 +188,121 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
     background-image: url('./img/wave.svg');
     background-repeat:repeat-x;
 }
+
+/* invia con progress bar */
+.progress-button {
+    position: relative;
+    display: inline-block;
+    padding: 0 35px;
+    outline: none;
+    border: 1px solid #CCC;
+    text-transform: uppercase;
+	font-weight:bold;
+    font-size: 1em;
+    line-height: 4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.progress-button:hover {
+    border: 1px solid #666;
+} 
+.progress-button[disabled],
+.progress-button[disabled].state-loading {
+    cursor: default;
+} 
+.progress-button .content {
+    position: relative;
+    display: block;
+} 
+.progress-button .content::before,
+.progress-button .content::after  {
+    position: absolute;
+    right: 14px;
+    color: #666;
+    font-family: "icomoon";
+    opacity: 0;
+    transition: opacity 0.3s 0.3s;
+} 
+.progress-button .content::before {
+    content: "\e606"; /* Checkmark for success */
+	color:#090;
+} 
+.progress-button .content::after {
+    content: "\e607"; /* Cross for error */
+	color:#C00;
+} 
+.progress-button.state-success .content::before,
+.progress-button.state-error .content::after {
+    opacity: 1;
+} 
+.notransition {
+    transition: none !important;
+} 
+.progress-button .progress {
+    background: #CECECE;
+} 
+.progress-button .progress-inner {
+    position: absolute;
+    left: 0;
+    background: #666;
+} 
+.progress-button[data-horizontal] .progress-inner {
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: width 0.3s, opacity 0.3s;
+} 
+.progress-button[data-vertical] .progress-inner {
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transition: height 0.3s, opacity 0.3s;
+}
+/* Individual styles */
+/* Choose the effect(s) you want, delete the rest */
+/* Fill horizontal */
+/* ====================== */
+.progress-button[data-style="fill"][data-horizontal] {
+	overflow: hidden;
+}
+.progress-button[data-style="fill"][data-horizontal] .content {
+	z-index: 10;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.progress-button[data-style="fill"][data-horizontal] .content::before,
+.progress-button[data-style="fill"][data-horizontal] .content::after {
+	top: 100%;
+	right: auto;
+	left: 50%;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.progress-button[data-style="fill"][data-horizontal].state-success .content,
+.progress-button[data-style="fill"][data-horizontal].state-error .content {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+/* fine invia con progress bar */
+#message {
+        display: block;
+        font-family: 'Marck Script',cursive;
+        font-size: 21px;
+        line-height: 50px;
+        padding: 11px 20px 0 70px;
+        resize: none;
+        height: 90%;
+        width: 100%;
+
+        background-image: -moz-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0px), -moz-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -moz-radial-gradient(3.9% 46% , circle closest-corner, #CCCCCC, #CCCCCC 43.5%, transparent 0%); 
+        background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
+
+        -webkit-background-size:  100% 50px;
+        background-size: 100% 50px;
+}
 </style>
     </head>
 
@@ -213,17 +328,24 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
         </section>
         <section id="live">Live</section>
         <section id="pimp">Pimp</section>
-        <section id="contact">Contact</section>
+        <section id="contact">
+            <form id="mailForm" action="sendmail.php" method="get" enctype="multipart/form-data">
+                <textarea name="message" id="message" title="message"></textarea><br><br>
+                <button type="submit" class="progress-button" data-style="fill" data-horizontal>Send</button>
+            </form>
+        </section>
         <footer>Footer</footer>
 
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/vendor/jquery.appear.js"></script>
         <script src="js/vendor/jquery.tubular.1.0.js"></script>
-
+        <script src="js/vendor/classie.js"></script>
+        <script src="js/vendor/progressButton.js"></script>
+		
         <script>
-
-        $(function() {
+        
         //INIZIO DOC READY
+        $(function() {
 
             $("#navalt").fadeToggle();
 
@@ -231,7 +353,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
               $("nav ul").slideToggle(150);
             });
 
-            // slide on page e testi gallery
+            // SCROLL TO PAGE E HOVER BACKGOUNDS
             $("a[href^='#']").click(function() {
                 $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
                 $("#navalt").css("background", "none");
@@ -259,6 +381,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
             
             // #WATCH
             $('#watch').tubular({videoId: 'sV-2tIB9G5w', mute: false, wrapperZIndex: 3});
+            // #FINE WATCH            
             
         });//FINE DOC READY
 
@@ -280,6 +403,47 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
                 }
             });
             // FINE #DRINKALLTHEMINIBAR
+            
+            
+            // #CONTACT
+            function jqxhr(instance, interval) {
+			var getVars = $("#mailForm").serialize();
+
+			$.get( "sendmail.php", getVars, function( data ){})
+			.done(function( data ) {
+				if(data == '1'){
+					instance._stop(0);
+					clearInterval( interval );
+				}
+				else {
+                        instance._stop(-1);
+                        clearInterval( interval );
+                    }
+                })
+                .fail(function() {
+                    instance._stop(-1);
+                    clearInterval( interval );
+                });
+                return false;
+            }
+
+            [].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
+                new ProgressButton( bttn, {
+                    callback : function( instance ) {
+                        var progress = 0,
+                            interval = setInterval( function() {
+                                progress = Math.min( progress + Math.random() * 0.1, 1 );
+                                instance._setProgress( progress );
+                                    if( progress === 1 ) {
+                                    instance._stop(-1);
+                                    clearInterval( interval );
+                                }
+                            }, 200 );
+                            jqxhr(instance, interval);
+                    }
+                } );
+            } );
+            // FINE #CONTACT
 
         </script>
     </body>
