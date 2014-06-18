@@ -17,7 +17,7 @@ function callInstagram($url){
     return $result;
 }
 
-$tag = 'punk';
+$tag = 'drinkalltheminibar';
 $client_id = "860f0e5d8ebf42ec8acc9ded7d51f02d";
 
 $url = 'https://api.instagram.com/v1/tags/'.$tag.'/media/recent?client_id='.$client_id;

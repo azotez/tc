@@ -205,7 +205,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
             </ul>
         </nav>
         <section id="navalt" class="table_centered"><div class="cell_centered"><img id="navalt-img" alt="" /></div></section>
-        <section id="watch">Watch</section>
+        <section id="watch"><?php require('./php/youtube.php'); ?></section>
         <section id="listen">Listen</section>
         <section id="sing">Sing</section>
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
@@ -257,7 +257,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
               $("#navalt").fadeToggle(150);
             });
             
-            
+            // #WATCH
             $('#watch').tubular({videoId: 'sV-2tIB9G5w', mute: false, wrapperZIndex: 3});
             
         });//FINE DOC READY
