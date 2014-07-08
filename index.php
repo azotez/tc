@@ -226,16 +226,16 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
     position: absolute;
     right: 14px;
     color: #55143e;
-    font-family: "icomoon";
+    font-family: "untitled-font-1";
     opacity: 0;
     transition: opacity 0.3s 0.3s;
 } 
 .progress-button .content::before {
-    content: "\e606"; /* Checkmark for success */
+    content: "H"; /* Checkmark for success */
 	color:#090;
 } 
 .progress-button .content::after {
-    content: "\e607"; /* Cross for error */
+    content: "E"; /* Cross for error */
 	color:#C00;
 } 
 .progress-button.state-success .content::before,

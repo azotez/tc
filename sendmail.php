@@ -16,6 +16,7 @@ if($_GET['message']!="") {
 	$messaggio->IsHTML(true);
 	$messaggio->From='info@azote.it';
 	$messaggio->AddAddress('azote@azote.it');
+    $messaggio->AddAddress('tommaso.trevisan@ekr.it');
 	$messaggio->AddReplyTo('info@azote.it');
 	$messaggio->Subject='The Consultants | "'.substr($_GET["message"],0,14).'..."';
 	$messaggio->Body=$_GET["message"];
