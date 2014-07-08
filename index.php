@@ -72,6 +72,7 @@ nav {
   width:49px;
   vertical-align:middle;
   text-align:center;
+  outline:none;
 }
 nav button {
     position:relative;
@@ -195,7 +196,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
     display: inline-block;
     padding: 0 35px;
     outline: none;
-    border: 1px solid #CCC;
+    border: 1px solid #a52278;
     text-transform: uppercase;
 	font-weight:bold;
     font-size: 1em;
@@ -203,10 +204,15 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+    background-color:#c7288c;
+    -moz-transition: background-color 0.2s ease-in 0s;
+    -webkit-transition: background-color  0.2s ease-in; /*safari and chrome */
+    -o-transition: background-color  0.2s ease-in; /* opera */
 }
 .progress-button:hover {
-    border: 1px solid #666;
-} 
+    background-color: #a52278;
+    background-color: 1px solid #55143e;
+}
 .progress-button[disabled],
 .progress-button[disabled].state-loading {
     cursor: default;
@@ -219,7 +225,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
 .progress-button .content::after  {
     position: absolute;
     right: 14px;
-    color: #666;
+    color: #55143e;
     font-family: "icomoon";
     opacity: 0;
     transition: opacity 0.3s 0.3s;
@@ -240,12 +246,13 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
     transition: none !important;
 } 
 .progress-button .progress {
-    background: #CECECE;
-} 
+    background: #a52278;
+
+}              
 .progress-button .progress-inner {
     position: absolute;
     left: 0;
-    background: #666;
+    background: #c82790;
 } 
 .progress-button[data-horizontal] .progress-inner {
     top: 0;
@@ -287,22 +294,53 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
 	transform: translateY(-100%);
 }
 /* fine invia con progress bar */
-#message {
-        display: block;
-        font-family: 'Marck Script',cursive;
-        font-size: 21px;
-        line-height: 50px;
-        padding: 11px 20px 0 70px;
-        resize: none;
-        height: 90%;
-        width: 100%;
-
-        background-image: -moz-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0px), -moz-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -moz-radial-gradient(3.9% 46% , circle closest-corner, #CCCCCC, #CCCCCC 43.5%, transparent 0%); 
-        background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
-
-        -webkit-background-size:  100% 50px;
-        background-size: 100% 50px;
+#mailForm {
+    display: inline-block;
+    width: 84%;
+    margin: 14% 0;
 }
+#message {
+        outline:none;
+        margin: 0 0 70px 0;
+        padding: 0;
+        border: 0;
+/*        font-family: 'Marck Script', cursive;*/
+        font-size: 21px;
+        line-height: 35px;
+        resize: none;
+        width: 100%;
+        height: 420px;
+        color: #55143e;
+        background: linear-gradient(
+          to bottom,
+          #c82790,
+          #c82790 34px,
+          #a52278 34px,
+          #a52278
+        );
+        background-size: 100% 35px;
+}
+#message:focus, #message:hover, #message:active {
+        border: 0;
+}
+#message::-webkit-input-placeholder {
+   color: #a52278;
+}
+
+#message:-moz-placeholder { /* Firefox 18- */
+   color: #a52278;  
+}
+
+#message::-moz-placeholder {  /* Firefox 19+ */
+   color: #a52278;  
+}
+
+#message:-ms-input-placeholder {  
+   color: #a52278;  
+}      
+#message:placeholder {  
+   color: #a52278;  
+}      
 </style>
     </head>
 
@@ -328,9 +366,9 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);*/
         </section>
         <section id="live">Live</section>
         <section id="pimp">Pimp</section>
-        <section id="contact">
-            <form id="mailForm" action="sendmail.php" method="get" enctype="multipart/form-data">
-                <textarea name="message" id="message" title="message"></textarea><br><br>
+        <section id="contact" class="table_centered">
+            <form id="mailForm" action="sendmail.php" method="get" enctype="multipart/form-data" class="cell_centered">
+                <textarea name="message" id="message" title="message" placeholder="Type here your message.."></textarea><br><br>
                 <button type="submit" class="progress-button" data-style="fill" data-horizontal>Send</button>
             </form>
         </section>
