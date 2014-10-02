@@ -384,10 +384,10 @@ background-image: linear-gradient(to right bottom, #C70AAB 0%, #EDF028 100%);
         <section id="home" class="table_centered" data-current="0" data-play="0">
             <div class="cell_centered"><img src="./img/tclogo.svg" alt="The Consultants" title="The Consultants" id="tc-logo" /></div>
         </section>        
-        <section id="watch"><?php include('./php/youtube.php'); ?><p id="video-controls" class="black-65">
+        <section id="watch"><?php require('./php/youtube.php'); ?></section>
+        <section id="listen"><p id="video-controls" class="black-65">
 <a href="#" class="tubular-play">Play</a>|<a href="#" class="tubular-pause">Pause</a>|<a href="#" class="tubular-volume-up">Volume Up</a>|<a href="#" class="tubular-volume-down">Volume Down</a>|<a href="#" class="tubular-mute">Mute</a>
-</p></section>
-        <section id="listen"><?php include('./php/music.php'); ?></section>
+</p><?php /*require('./php/music.php');*/ ?></section>
         <section id="sing">Sing</section>
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
             <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></div>
@@ -443,12 +443,23 @@ background-image: linear-gradient(to right bottom, #C70AAB 0%, #EDF028 100%);
             }, function(){
               // out function
               $("#navalt").fadeToggle(150);
-            });
-			
-			$('#watch').tubular({videoId:'sV-2tIB9G5w', mute:false, wrapperZIndex:3});
-			window.player.pauseVideo();
+            });         
+            
 			
         });//FINE DOC READY
+
+            // #WATCH
+			$('#watch').appear();
+            $(document.body).on('appear', '#watch', function(e, $affected) {
+				$('#watch').tubular({videoId:'sV-2tIB9G5w', mute:false, wrapperZIndex:3});                
+            });
+			/*
+            $(document.body).on('disappear', '#watch', function(e, $affected) {
+				// metti video in pausa
+               // window.player.pauseVideo(); 
+            });
+			*/
+            // FINE #WATCH
 
             // #DRINKALLTHEMINIBAR
             <?php require('./php/instagram.php'); ?>
