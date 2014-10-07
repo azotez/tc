@@ -57,7 +57,7 @@ background-image: linear-gradient(to left top, #1313F2 0%, #30C8FF 100%);
 section {
 	display:inline-block;
 	width:100%;
-	height:100%;
+	min-height:100%;
 	padding: 0;
 	margin: 0;
 	max-width: 100%;
