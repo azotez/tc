@@ -1,4 +1,4 @@
-<?php
+  <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
@@ -348,21 +348,44 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
 	linear,
 	left top,
 	right bottom,
-	color-stop(0, #C70AAB),
+	color-stop(0, #D41152),
 	color-stop(1, #EDF028)
 );
-background-image: -o-linear-gradient(right bottom, #C70AAB 0%, #EDF028 100%);
-background-image: -moz-linear-gradient(right bottom, #C70AAB 0%, #EDF028 100%);
-background-image: -webkit-linear-gradient(right bottom, #C70AAB 0%, #EDF028 100%);
-background-image: -ms-linear-gradient(right bottom, #C70AAB 0%, #EDF028 100%);
-background-image: linear-gradient(to right bottom, #C70AAB 0%, #EDF028 100%);
+background-image: -o-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+background-image: -moz-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+background-image: -webkit-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+background-image: -ms-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
 }
 
 #tc-logo {
-    width: 77%;
-	max-height: 90%;
+    width: 70%;
+	max-height: 70%;
 }
 
+#social {
+	display: block;
+	clear: both;
+	text-align: center;
+	margin: 0;
+}
+#social li {
+	display: inline-block;
+	float: none;
+	margin: 0 0.3em;
+}
+
+#social li a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 3em;
+	line-height: 3.6em !important;
+	vertical-align: middle;
+}
+
+#yt-larger {
+	font-size: 3.6em !important;
+}
 </style>
 
     </head>
@@ -382,7 +405,12 @@ background-image: linear-gradient(to right bottom, #C70AAB 0%, #EDF028 100%);
         </nav>
         <section id="navalt" class="table_centered"><div class="cell_centered"><img id="navalt-img" alt="" /></div></section>
         <section id="home" class="table_centered" data-current="0" data-play="0">
-            <div class="cell_centered"><img src="./img/tclogo.svg" alt="The Consultants" title="The Consultants" id="tc-logo" /></div>
+            <div class="cell_centered"><img src="./img/tclogo.svg" alt="The Consultants" title="The Consultants" id="tc-logo" />
+            <ul id="social">
+            	<li><a href="http://www.facebook.com/theconsultantsmusic" data-icon="g" title="The Consultants on Facebook"></a></li>
+                <li><a href="http://www.youtube.com/playlist?list=PLo55pWGTS0ofwpZv4DsSYoUYY-0pr6FFV" data-icon="s" title="The Consultants on Youtube" id="yt-larger"></a></li>
+                <li><a href="http://instagram.com/the_consultants" data-icon="V" title="The Consultants on Instagram"></a></li>
+            </ul>
         </section>        
         <section id="watch"><?php include('./php/youtube.php'); ?><p id="video-controls" class="black-65">
 <a href="#" class="tubular-play">Play</a>|<a href="#" class="tubular-pause">Pause</a>|<a href="#" class="tubular-volume-up">Volume Up</a>|<a href="#" class="tubular-volume-down">Volume Down</a>|<a href="#" class="tubular-mute">Mute</a>
@@ -390,7 +418,7 @@ background-image: linear-gradient(to right bottom, #C70AAB 0%, #EDF028 100%);
         <section id="listen"><?php include('./php/music.php'); ?></section>
         <section id="sing">Sing</section>
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
-            <div class="cell_centered"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></div>
+            <div class="cell_centered"><a href="http://www.enjoygram.com/tag/drinkalltheminibar"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></a></div>
         </section>
         <section id="live">Live</section>
         <section id="pimp">Pimp</section>
