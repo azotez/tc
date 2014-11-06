@@ -46,13 +46,15 @@ body {
 	left top,
 	color-stop(0, #1313F2),
 	color-stop(1, #30C8FF)
-);
-background-image: -o-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-background-image: -moz-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-background-image: -webkit-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-background-image: -ms-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-background-image: linear-gradient(to left top, #1313F2 0%, #30C8FF 100%);
-*/
+);*/
+    /*
+    background-image: -o-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
+    background-image: -moz-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
+    background-image: -webkit-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
+    background-image: -ms-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
+    background-image: linear-gradient(to left top, #1313F2 0%, #30C8FF 100%);
+    */
+    background-color:#f15623;
 }
 section {
 	display:inline-block;
@@ -140,11 +142,14 @@ background-image: -webkit-linear-gradient(left top, #000000 0px, transparent 1px
 background-image: -ms-linear-gradient(left top, #000000 0px, transparent 1px);
 background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
 	*/
+    /*
     background-repeat: repeat;
     background-image: url('./img/back.gif');
+    */
 }
 #listen {
     background-color:#f15623;
+    position: relative;
 }
 #sing {
     background-color:#fbdd00;
@@ -343,19 +348,42 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
 #message:placeholder {  
    color: #a52278;  
 }
+/*            
+@-webkit-keyframes home_bg {
+  0%  { background-image: -webkit-linear-gradient(right bottom, #D41152 0%, #EDF028 100%); }
+  50% { background-image: -webkit-linear-gradient(right bottom, #000000 0%, #ffffff 100%); }
+  100%{ background-image: -webkit-linear-gradient(right bottom, #D41152 0%, #EDF028 100%); }
+}
+@-moz-keyframes home_bg {
+  0%  { background-image: -moz-linear-gradient(right bottom, #D41152 0%, #EDF028 100%); }
+  50% { background-image: -moz-linear-gradient(right bottom, #000000 0%, #ffffff 100%); }
+  100%{ background-image: -moz-linear-gradient(right bottom, #D41152 0%, #EDF028 100%); }
+}
+@-o-keyframes home_bg {
+  0%  { background-image: -o-linear-gradient(right bottom, #D41152 0%, #EDF028 100%); }
+  50% { background-image: -o-linear-gradient(right bottom, #000000 0%, #ffffff 100%); }
+  100%{ background-image: -o-linear-gradient(right bottom, #D41152 0%, #EDF028 100%); }
+}
+@keyframes home_bg {
+  0%  { background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%); }
+  50% { background-image: linear-gradient(to right bottom, #000000 0%, #ffffff 100%); }
+  100%{ background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%); }
+}
+*/
 #home {
-	background-image: -webkit-gradient(
-	linear,
-	left top,
-	right bottom,
-	color-stop(0, #D41152),
-	color-stop(1, #EDF028)
-);
-background-image: -o-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
-background-image: -moz-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
-background-image: -webkit-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
-background-image: -ms-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
-background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
+	/*background-image: -webkit-gradient(linear,left top,right bottom,color-stop(0, #D41152),color-stop(1, #EDF028));*/
+    
+    background-image: -o-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+    background-image: -moz-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+    background-image: -webkit-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+    background-image: -ms-linear-gradient(right bottom, #D41152 0%, #EDF028 100%);
+    background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
+    /*
+    -webkit-animation: home_bg 5s infinite;
+    -moz-animation: home_bg 5s infinite;
+    -o-animation: home_bg 5s infinite;
+    animation: home_bg 5s infinite;
+    */
 }
 
 #tc-logo {
@@ -363,24 +391,30 @@ background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
 	max-height: 70%;
 }
 
-#social {
+#social, #video-controls {
 	display: block;
 	clear: both;
 	text-align: center;
 	margin: 0;
+    padding: 0 !important;
 }
-#social li {
+#social li, #video-controls li{
 	display: inline-block;
 	float: none;
 	margin: 0 0.3em;
 }
 
-#social li a {
+#social li a, #video-controls li a{
 	color: #FFF;
 	text-decoration: none;
 	font-size: 3em;
 	line-height: 3.6em !important;
 	vertical-align: middle;
+}
+#video-controls {
+  margin: auto;
+  position: absolute;
+  left: 0; bottom: 0; right: 0;
 }
 
 #yt-larger {
@@ -394,12 +428,13 @@ background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
         <nav>
             <button type="button" data-icon="l"></button>
             <ul>
+                <li><a href="#home" data-icon="v" data-image="tclogo.svg" title="Home" data-color="#FFCC00"></a></li>
                 <li><a href="#watch" data-icon="U" data-image="watch.svg" title="Watch" data-color="#ed1c24"></a></li>
                 <li><a href="#listen" data-icon="f" title="Listen" data-image="listen.svg" data-color="#f15623"></a></li>
-                <li><a href="#sing" data-icon="q" title="Sing" data-image="sing.svg" data-color="#fbdd00"></a></li>
-                <li><a href="#live" data-icon="j" title="Live" data-image="live.svg" data-color="#74c044"></a></li>
+                <!-- <li><a href="#sing" data-icon="q" title="Sing" data-image="sing.svg" data-color="#fbdd00"></a></li> -->
+                <!-- <li><a href="#live" data-icon="j" title="Live" data-image="live.svg" data-color="#74c044"></a></li> -->
                 <li><a href="#drinkalltheminibar" data-icon="C" title="#drinkalltheminibar" data-image="drink.svg" data-color="#00a9ea"></a></li>
-                <li><a href="#pimp" data-icon="W" title="Pimp" data-image="pimp.svg" data-color="#1d439b"></a></li>
+                <!-- <li><a href="#pimp" data-icon="W" title="Pimp" data-image="pimp.svg" data-color="#1d439b"></a></li> -->
                 <li><a href="#contact" data-icon="N" title="Contact" data-image="contact.svg" data-color="#c82790"></a></li>
             </ul>
         </nav>
@@ -411,24 +446,30 @@ background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
                 <li><a href="http://www.youtube.com/playlist?list=PLo55pWGTS0ofwpZv4DsSYoUYY-0pr6FFV" data-icon="s" title="The Consultants on Youtube" id="yt-larger"></a></li>
                 <li><a href="http://instagram.com/the_consultants" data-icon="V" title="The Consultants on Instagram"></a></li>
             </ul>
-        </section>        
-        <section id="watch"><?php include('./php/youtube.php'); ?><p id="video-controls" class="black-65">
-<a href="#" class="tubular-play">Play</a>|<a href="#" class="tubular-pause">Pause</a>|<a href="#" class="tubular-volume-up">Volume Up</a>|<a href="#" class="tubular-volume-down">Volume Down</a>|<a href="#" class="tubular-mute">Mute</a>
-</p></section>
-        <section id="listen"><?php include('./php/music.php'); ?></section>
-        <section id="sing">Sing</section>
+        </section>
+        <section id="watch" data-appear-top-offset="-70"><?php /* include('./php/youtube.php'); */ ?>
+            <ul id="video-controls">
+                <li><a href="#" class="tubular-play" data-icon="m"></a></li>
+                <li><a href="#" class="tubular-pause" data-icon="o"></a></li>
+                <li><a href="#" class="tubular-volume-up" data-icon="A"></a></li>
+                <li><a href="#" class="tubular-volume-down" data-icon="z"></a></li>
+                <li><a href="#" class="tubular-mute" data-icon="B"></a></li>
+            </ul>
+        </section>
+        <section id="listen" class="table_centered"><?php /* include('./php/music.php'); */ ?><iframe style="border: 0; width: 310px; height: 548px; margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;" src="http://bandcamp.com/EmbeddedPlayer/album=3135164995/size=large/bgcol=333333/linkcol=f15623/transparent=true/" seamless><a href="http://theconsultants.bandcamp.com/album/my-work-sucks-so-please-buy-my-bands-t-shirt">My work sucks, so please buy my band&#39;s T-shirt! by The Consultants</a></iframe></section>
+        <!-- <section id="sing">Sing</section> -->
         <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
             <div class="cell_centered"><a href="http://www.enjoygram.com/tag/drinkalltheminibar"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></a></div>
         </section>
-        <section id="live">Live</section>
-        <section id="pimp">Pimp</section>
+        <!-- <section id="live">Live</section> -->
+        <!-- <section id="pimp">Pimp</section> -->
         <section id="contact" class="table_centered">
             <form id="mailForm" action="sendmail.php" method="get" enctype="multipart/form-data" class="cell_centered">
                 <textarea name="message" id="message" title="message" placeholder="Type here your message.."></textarea><br><br>
                 <button type="submit" class="progress-button" data-style="fill" data-horizontal>Send</button>
             </form>
         </section>
-        <footer>Footer</footer>
+        <!--  <footer>Footer</footer> -->
 
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/vendor/jquery.appear.js"></script>
@@ -473,8 +514,15 @@ background-image: linear-gradient(to right bottom, #D41152 0%, #EDF028 100%);
               $("#navalt").fadeToggle(150);
             });
 			
-			$('#watch').tubular({videoId:'sV-2tIB9G5w', mute:false, wrapperZIndex:3});
-			window.player.pauseVideo();
+            $('#watch').tubular({videoId:'sV-2tIB9G5w', mute:false, wrapperZIndex:3});
+            
+            $('#watch').appear();
+            $(document.body).on('appear', '#watch', function(e, $affected) {
+                window.player.playVideo();
+            });
+            $(document.body).on('disappear', '#watch', function(e, $affected) {
+                window.player.pauseVideo();
+            });        
 			
         });//FINE DOC READY
 

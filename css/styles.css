@@ -224,3 +224,6 @@
 .icon-watch:before {
   content: "1";
 }
+.icon-home:before {
+  content: "v";
+}
