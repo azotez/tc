@@ -39,10 +39,10 @@
             $node = $(node); // cache wrapper node
 
         // build container
-        // var tubularContainer = '<div id="tubular-container" style="overflow: hidden; position: fixed; z-index: 1; width: 100%; height: 100%"><div id="tubular-player" style="position: absolute"></div></div><div id="tubular-shield" style="width: 100%; height: 100%; z-index: 2; position: absolute; left: 0; top: 0;"></div>';
+        //var tubularContainer = '<div id="tubular-container" style="overflow: hidden; position: fixed; z-index: 1; width: 100%; height: 100%"><div id="tubular-player" style="position: absolute"></div></div><div id="tubular-shield" style="width: 100%; height: 100%; z-index: 2; position: absolute; left: 0; top: 0;"></div>';
 
-        var tubularContainer = '<div id="tubular-container" style="overflow: hidden; position: absolute; z-index: 1; width: 100%; height: 100%; top: 100%;"><div id="tubular-player" style="position: absolute"></div></div><div id="tubular-shield" style="width: 100%; height: 100%; z-index: 2; position: absolute; left: 0; top:100%;"></div>';
-		
+        var tubularContainer = '<div id="tubular-container" style="overflow: hidden; z-index: 1; width: 100%; height: 100%"><div id="tubular-player"></div></div><div id="tubular-shield" style="width: 100%; height: 100%; z-index: 2;"></div>';
+        
 		// posizionamento senza top: 100% (comportamento di default)
 		// var tubularContainer = '<div id="tubular-container" style="overflow: hidden; position: absolute; z-index: 1; width: 100%; height: 100%"><div id="tubular-player" style="position: absolute"></div></div><div id="tubular-shield" style="width: 100%; height: 100%; z-index: 2; position: absolute; left: 0; top: 0;"></div>';
 

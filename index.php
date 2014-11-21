@@ -1,4 +1,4 @@
-  <?php
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
@@ -34,35 +34,24 @@ ini_set('display_errors', 1);
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 		<style type="text/css">
-html {
-	height:100%;
-}
-body {
-	height:100%;
-    /*
-    background-image: -webkit-gradient(
-	linear,
-	left top,
-	left top,
-	color-stop(0, #1313F2),
-	color-stop(1, #30C8FF)
-);*/
-    /*
-    background-image: -o-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-    background-image: -moz-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-    background-image: -webkit-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-    background-image: -ms-linear-gradient(left top, #1313F2 0%, #30C8FF 100%);
-    background-image: linear-gradient(to left top, #1313F2 0%, #30C8FF 100%);
-    */
-    background-color:#f15623;
+html, body {
+    height: 100%;
 }
 section {
-	display:inline-block;
-	width:100%;
-	min-height:100%;
-	padding: 0;
-	margin: 0;
+    text-align: center;
+    width: 100%;
+	min-height: 100%;
 	max-width: 100%;
+    padding: 0;
+	margin: 0;
+}
+.cell_centered {
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 21px 0;
 }
 nav {
   position: fixed;
@@ -80,21 +69,21 @@ nav button {
     position:relative;
 	padding: 0;
 	margin: 0;
-    top:0;
-    left:0;
-    width:49px;
-    height:49px;
-    background:transparent;
-    border:0;
+    top: 0;
+    left: 0;
+    width: 49px;
+    height: 49px;
+    background: transparent;
+    border: 0;
 }
 nav ul {
 	display: none;
-	position:relative;
-    left:0;
-	padding:0;
-	margin:0;
-    width:49px;
-    overflow:hidden;
+	position: relative;
+    left: 0;
+	padding: 0;
+	margin: 0;
+    width: 49px;
+    overflow: hidden;
 }
 nav ul li {
 	padding: 7px;
@@ -109,17 +98,9 @@ nav button, nav a {
 .theme.bigtext{
     font-family:Arial;
 }
-.table_centered {
-    display:table;
-    text-align:center;
-}
-.cell_centered {
-    display:table-cell;
-    vertical-align:middle;
-}
 #navalt-img {
     width: 77%;
-    padding-left:25px;
+    padding-left: 25px;
 }
 #navalt {
     background-image: none;
@@ -302,9 +283,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
 }
 /* fine invia con progress bar */
 #mailForm {
-    display: inline-block;
     width: 84%;
-    margin: 14% 0;
 }
 #message {
         outline:none;
@@ -413,7 +392,6 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
 }
 #video-controls {
   margin: auto;
-  position: absolute;
   left: 0; bottom: 0; right: 0;
 }
 
@@ -429,7 +407,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
             <button type="button" data-icon="l"></button>
             <ul>
                 <li><a href="#home" data-icon="v" data-image="tclogo.svg" title="Home" data-color="#FFCC00"></a></li>
-                <li><a href="#watch" data-icon="U" data-image="watch.svg" title="Watch" data-color="#ed1c24"></a></li>
+                <!--<li><a href="#watch" data-icon="U" data-image="watch.svg" title="Watch" data-color="#ed1c24"></a></li>-->
                 <li><a href="#listen" data-icon="f" title="Listen" data-image="listen.svg" data-color="#f15623"></a></li>
                 <!-- <li><a href="#sing" data-icon="q" title="Sing" data-image="sing.svg" data-color="#fbdd00"></a></li> -->
                 <!-- <li><a href="#live" data-icon="j" title="Live" data-image="live.svg" data-color="#74c044"></a></li> -->
@@ -438,8 +416,8 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
                 <li><a href="#contact" data-icon="N" title="Contact" data-image="contact.svg" data-color="#c82790"></a></li>
             </ul>
         </nav>
-        <section id="navalt" class="table_centered"><div class="cell_centered"><img id="navalt-img" alt="" /></div></section>
-        <section id="home" class="table_centered" data-current="0" data-play="0">
+        <section id="navalt"><div class="cell_centered"><img id="navalt-img" alt="" /></div></section>
+        <section id="home" data-current="0" data-play="0">
             <div class="cell_centered"><img src="./img/tclogo.svg" alt="The Consultants" title="The Consultants" id="tc-logo" />
             <ul id="social">
             	<li><a href="http://www.facebook.com/theconsultantsmusic" data-icon="g" title="The Consultants on Facebook"></a></li>
@@ -447,7 +425,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
                 <li><a href="http://instagram.com/the_consultants" data-icon="V" title="The Consultants on Instagram"></a></li>
             </ul>
         </section>
-        <section id="watch" data-appear-top-offset="-70"><?php /* include('./php/youtube.php'); */ ?>
+        <!--<section id="watch" data-appear-top-offset="-70"><?php /* include('./php/youtube.php'); */ ?>
             <ul id="video-controls">
                 <li><a href="#" class="tubular-play" data-icon="m"></a></li>
                 <li><a href="#" class="tubular-pause" data-icon="o"></a></li>
@@ -455,15 +433,15 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
                 <li><a href="#" class="tubular-volume-down" data-icon="z"></a></li>
                 <li><a href="#" class="tubular-mute" data-icon="B"></a></li>
             </ul>
-        </section>
-        <section id="listen" class="table_centered"><?php /* include('./php/music.php'); */ ?><iframe style="border: 0; width: 310px; height: 548px; margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;" src="http://bandcamp.com/EmbeddedPlayer/album=3135164995/size=large/bgcol=333333/linkcol=f15623/transparent=true/" seamless><a href="http://theconsultants.bandcamp.com/album/my-work-sucks-so-please-buy-my-bands-t-shirt">My work sucks, so please buy my band&#39;s T-shirt! by The Consultants</a></iframe></section>
+        </section>-->
+        <section id="listen"><?php /* include('./php/music.php'); */ ?><iframe style="border: 0; width: 310px; height: 548px;" src="http://bandcamp.com/EmbeddedPlayer/album=3135164995/size=large/bgcol=333333/linkcol=f15623/transparent=true/" class="cell_centered" seamless><a href="http://theconsultants.bandcamp.com/album/my-work-sucks-so-please-buy-my-bands-t-shirt">My work sucks, so please buy my band&#39;s T-shirt! by The Consultants</a></iframe></section>
         <!-- <section id="sing">Sing</section> -->
-        <section id="drinkalltheminibar" class="table_centered" data-current="0" data-play="0">
+        <section id="drinkalltheminibar" data-current="0" data-play="0">
             <div class="cell_centered"><a href="http://www.enjoygram.com/tag/drinkalltheminibar"><img src="./img/datm.svg" alt="drinkalltheminibar" id="datm-logo" /></a></div>
         </section>
         <!-- <section id="live">Live</section> -->
         <!-- <section id="pimp">Pimp</section> -->
-        <section id="contact" class="table_centered">
+        <section id="contact">
             <form id="mailForm" action="sendmail.php" method="get" enctype="multipart/form-data" class="cell_centered">
                 <textarea name="message" id="message" title="message" placeholder="Type here your message.."></textarea><br><br>
                 <button type="submit" class="progress-button" data-style="fill" data-horizontal>Send</button>
@@ -514,6 +492,7 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
               $("#navalt").fadeToggle(150);
             });
 			
+        /*    
             $('#watch').tubular({videoId:'sV-2tIB9G5w', mute:false, wrapperZIndex:3});
             
             $('#watch').appear();
@@ -522,8 +501,9 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
             });
             $(document.body).on('disappear', '#watch', function(e, $affected) {
                 window.player.pauseVideo();
-            });        
-			
+            });
+            
+		*/	
         });//FINE DOC READY
 
             // #DRINKALLTHEMINIBAR
