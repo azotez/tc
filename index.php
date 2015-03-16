@@ -11,9 +11,9 @@ ini_set('display_errors', 1);
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title></title>
-		<meta name="description" content="">
-        <meta name="keywords" content="the consultants, punk rock">
+		<title>The Consultants & The Würstels official website</title>
+		<meta name="description" content="The Consultants & The Würstels official website">
+        <meta name="keywords" content="consultants, würstels, indie, punk, rock, music, band, rocknroll, trent, thebritneysconversion, la scena, tcw, drinkalltheminibar, drink all the minibar, drink, minibar, theconsultants, thewurstels, wurstels, gigs, shows, album, cd, ep">
 		<meta name="author" content="Davide Trevisan | azote.it">
 
 		<link rel="stylesheet" href="css/normalize.min.css">
@@ -565,6 +565,15 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
                 } );
             } );
             // FINE #CONTACT
+
+
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-60777331-1', 'auto');
+		  ga('send', 'pageview');
 
         </script>
     </body>
