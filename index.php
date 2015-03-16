@@ -11,9 +11,9 @@ ini_set('display_errors', 1);
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>The Consultants & The Würstels official website</title>
+		<title>The Consultants &amp; The Würstels official website</title>
 		<meta name="description" content="The Consultants & The Würstels official website">
-        <meta name="keywords" content="consultants, würstels, indie, punk, rock, music, band, rocknroll, trent, thebritneysconversion, la scena, tcw, drinkalltheminibar, drink all the minibar, drink, minibar, theconsultants, thewurstels, wurstels, gigs, shows, album, cd, ep">
+        <meta name="keywords" content="consultants, würstels, indie, punk, rock, music, band, rocknroll, trent, thebritneysconversion, la scena, tcw, drinkalltheminibar, drink all the minibar, drink, minibar, theconsultants, thewurstels, wurstels, gigs, shows, album, cd, ep, italians, talent">
 		<meta name="author" content="Davide Trevisan | azote.it">
 
 		<link rel="stylesheet" href="css/normalize.min.css">
@@ -37,7 +37,7 @@ ini_set('display_errors', 1);
 html, body {
     height: 100%;
 }
-section {
+section, footer {
     text-align: center;
     width: 100%;
 	min-height: 100%;
@@ -398,6 +398,18 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
 #yt-larger {
 	font-size: 3.6em !important;
 }
+
+footer {
+	background: #121212;
+	color: #DEDEDE;
+	line-heignt: 2.5em;
+	font-size: 1.8em;
+	text-align: left;
+}
+
+footer div {
+	padding: 8%;
+}
 </style>
 
     </head>
@@ -447,7 +459,19 @@ background-image: linear-gradient(to left top, #000000 0px, transparent 1px);
                 <button type="submit" class="progress-button" data-style="fill" data-horizontal>Send</button>
             </form>
         </section>
-        <!--  <footer>Footer</footer> -->
+        <footer>
+        	<div><strong>Biography</strong><br><br>
+The Consultants non è una band qualsiasi. O meglio, non è una band nel senso stretto della parola.<br>
+E' un progetto nato dalla voglia di Tommaso Trevisan - musicista con background hardcore e presenza attiva ed attuale in diverse formazioni - di tornare alle cose semplici, allegre, e di fare tutto in casa.<br>
+"I consulenti" rappresentano il desiderio di dire basta ad un lavoro che non li sta portando da nessuna parte, di dire no ad una vita che li costringe - crescendo - ad entrare a far parte di un sistema che ancora rifiutano.<br>
+E' una scommessa quasi solista, perché senza il supporto delle persone più care non sarebbe mai stato possibile.<br>
+Se da un lato i propri limiti sono oltrepassati con determinazione (Tommaso suona chitarra, basso, batteria e organetto), dall'altro vengono riconosciuti, interiorizzati e sfruttati per avere la collaborazione del fratello Davide (voce principale), e degli amici musicisti per i cori.<br><br><br><br>
+            <strong>My Work Sucks, So Please Buy My Band's T-shirt!</strong><br><br>
+"My Work Sucks, So Please Buy My Band's T-shirt!" è il loro primo EP interamente autoprodotto, ed è dedicato a tutte le band che vorrebbero emergere, ma che vengono soffocate dagli impegni di tutti i giorni.<br>
+E' ritornare al passato con la consapevolezza del presente, per affrontare i problemi della vita con maggior leggerezza.<br>
+Tutte le canzoni sono state scritte un sabato mattina dopo il risveglio, per evitare qualsiasi tipo di condizionamento. E suonano proprio come l'inizio di un fine settimana.
+			</div>
+        </footer>
 
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/vendor/jquery.appear.js"></script>
